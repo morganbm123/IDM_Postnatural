@@ -1,0 +1,101 @@
+from gpiozero import LED
+import RPi.GPIO as GPIO
+import time
+from time import sleep
+import pygame
+
+pygame.mixer.init()
+
+
+
+GPIO.setwarnings(False)
+GPIO.cleanup()
+GPIO.setmode(GPIO.BCM)
+
+TRIG = 4
+ECHO = 18
+led = LED(20)
+
+GPIO.setup(TRIG, GPIO.OUT)
+GPIO.setup(ECHO, GPIO.IN)
+
+
+def ivy_distance_close():
+    pygame.mixer.music.load("ivy_love_close_dist.mp3")
+    pygame.mixer.music.play()
+    
+    while pygame.mixer.music.get_busy() == True:
+        continue
+    
+def ivy_distance_med():
+    pygame.mixer.music.load("ivy_love_medium_dist.mp3")
+    pygame.mixer.music.play()
+    
+    while pygame.mixer.music.get_busy() == True:
+        continue
+    
+def ivy_distance_far():
+    pygame.mixer.music.load("ivy_love_far_dist.mp3")
+    pygame.mixer.music.play()
+    
+    while pygame.mixer.music.get_busy() == True:
+        continue
+
+def get_distance():
+    GPIO.output(TRIG, True)
+    time.sleep(0.0001)
+    GPIO.output(TRIG, False)
+
+    while GPIO.input(ECHO) == False:
+        start = time.time()
+
+    while GPIO.input(ECHO) == True:
+        end = time.time()
+
+        sig_time = end-start
+
+    #cm:
+    distance = sig_time /  0.000058
+
+    print('Distance: {} cm'.format(distance))
+    return distance
+
+while True:
+    distance = get_distance()
+    time.sleep(0.5)
+    led.off()
+    
+    if distance < 500 and distance > 150:
+        led.on()
+        ivy_distance_far()
+        print('this is the far distance')
+        
+    
+    elif distance < 150 and distance > 60:
+        led.on()
+
+        ivy_distance_med()
+        print('this is the medium distance')
+            
+    
+    elif distance < 60:
+        led.on()
+#         sleep(1)
+#         led.off()
+#         sleep(1)
+#         led.on()
+#         sleep(1)
+#         led.off()
+#         led.on()
+#         sleep(1)
+#         led.off()
+#         sleep(1)
+#         led.on()
+#         sleep(1)
+#         led.off()
+        ivy_distance_close()
+        print('this is the close distance')
+        
+    
+        
+
