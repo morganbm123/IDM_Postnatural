@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+  background-color: Black;
+
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.header {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 10px;
+  display: block;
+ text-align: center;
+justify-content: center;
+
+}
+
+.para {
+
+   padding-left: 150px;
+   padding-right: 150px;
+   padding-bottom: 10px;
+   display: block;
+  text-align: justify;
+justify-content: center;
+
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+
+/* Add Animation */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+.container{
+  display:inline-flex;
+  position:relative;
+}
+
+#feynman:hover + #feynman_text{
+  opacity:1;
+}
+#feynman_text:hover{
+  opacity:1;
+}
+
+#feynman_text{
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  opacity:0;
+  transition: 0.5s;
+  text-opacity:20;
+}
+
+</style>
+<body>
+
+
+
+
+<!-- Header -->
+<div class="header">
+<font color="white">  <h1>United States Nuclear Waste Futures<br></h1>
+  <hr size="1"></hr>
+</div>
+
+<div class="para">
+  <font color="white"> <p>As of 2019 the United States does not have a permanent geological repository for spent, high level nucelar waste. This being so, Nuclear power plants
+                           have been storing this spent fuel on site using below ground wet pool and above ground dry cask storage methods for years. This waste stays at the facilities
+                          even after decommissioning. All of dry cask stored waste is called Independent Spent Fuel Storage Installations(ISFSIs) and each new cask needs to be approved
+                          by the US Nuclear Regulatory Committee.<br><br>
+                          Looking at these ISFSIs from a from a satellite perspective gives the viewer the opportunity to see the build up of these casks through a timelapse
+                           which takes place over the course of nearly thirty years. Along with the aesthetic interest that these sites have, the driving interest for the piece
+                          was that all of this nuclear waste is going to remain far longer than any of the humans who created/used/stored the fuel. I belive that it is important
+                          to frame this piece around the Seventh Generation Iriqous philosophy<br><br>
+
+                          The Seventh Generation philosophy dictates that the decisions we make today should result in a sustainable world seven generations into the future.
+                          The fact that this nuclear waste will remain far longer than even seven generations brings a lot to questions up regarding best practices for the
+                          use of nuclear energy and its storage in the coming years.<br></p><br>
+                          <hr size="1"></hr>
+
+                        </div>
+<!-- Photo Grid -->
+<div class="row">
+  <div class="column">
+
+
+<div class="container">
+    <a  href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/beaver/beaverClose.mp4" target=_self>
+    <img id="myImg1" src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/beaver/beaverClose.jpg" alt="Beaver Close" style="width:100%"></a>
+    <div id='feynman_text'> PG&E Trojan Nuclear Plant(Close View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/comanche/comancheClose.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/comanche/comancheClose.jpg" style="width:100%" ></a>
+    <div id='feynman_text'> Comanche Nuclear Plant (Close View) </div>
+    </div>
+
+  <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/comanche/comancheFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/comanche/comancheFar.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Comanche Nuclear Plant (Far View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/diablo/comancheClose.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/diablo/diabloClose.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Diablo Nuclear Plant (Close View) </div>
+    </div>
+
+  <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/diablo/diabloFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/diablo/diabloFar.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Diablo Nuclear Plant (Far View) </div>
+    </div>
+
+  <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/prairie/prairieClose.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/prairie/prairieClose.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Prairie Nuclear Plant (Close View) </div>
+    </div>
+
+    <div class="container">
+      <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/arkansas/arkansasClose.mp4" target=_self>
+      <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/arkansas/close.jpg" style="width:100%"></a>
+      <div id='feynman_text'> Arkansas Nuclear Plant (Close View) </div>
+      </div>
+  </div>
+
+  <div class="column">
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/beaver/beaverFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/beaver//beaverFar.jpg" alt="Beaver Far" style="width:100%"></a>
+    <div id='feynman_text'> PG&E Trojan Nuclear Plant(Far View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/morris/morrisClose.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/morris/morrisClose.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Morris Nuclear Plant(Close View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/morris/morrisFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/morris/morrisFar.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Morris Nuclear Plant(Far View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/paloVerde/paloClose.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/paloVerde/paloClose.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Palo Verde Nuclear Plant(Close View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/paloVerde/paloFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/paloVerde/paloFar.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Palo Verde Nuclear Plant(Far View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/prairie/prairieFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/prairie/prairieFar.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Prairie Nuclear Plant(Far View) </div>
+    </div>
+
+    <div class="container">
+      <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/arkansas/arkansasFar.mp4" target=_self>
+      <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/arkansas/far.jpg" style="width:100%"></a>
+      <div id='feynman_text'> Arkansas Nuclear Plant (Far View) </div>
+      </div>
+  </div>
+
+  <div class="column">
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/nineMile/nineMileClose.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/nineMile/nineClose.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Nine Mile Nuclear Plant(Close View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/nineMile/nineMileFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/nineMile/nineFar.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Nine Mile Nuclear Plant(Far View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/northAnna/northClose.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/northAnna/northClose.jpg" style="width:100%"></a>
+    <div id='feynman_text'> North Anna Nuclear Plant(Close View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/northAnna/northFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/northAnna/northFar.jpg" style="width:100%"></a>
+    <div id='feynman_text'> North Anna Nuclear Plant(Far View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/vrain/vrainClose.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/vrain/vrainClose.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Vrain Nuclear Plant(Close View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/vrain/vrainFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/vrain/vrainFar.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Vrain Nuclear Plant(Far View) </div>
+  </div>
+
+    <div class="container">
+      <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/dominion/dominionClose.mp4" target=_self>
+      <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/dominion/dominionClose.jpg" style="width:100%"></a>
+      <div id='feynman_text'> Dominion Nuclear Plant (Close View) </div>
+      </div>
+
+  </div>
+  <div class="column">
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/onconee/onconeeClose.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/onconee/onconeeClose.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Onconee Nuclear Plant(Close View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/onconee/onconeeFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/onconee/onconeeFar.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Onconee Nuclear Plant(Far View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/onofre/onofreClose.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/onofre/onofreClose.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Onofre Nuclear Plant(Close View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/onofre/onofreFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/onofre/onofreFar.jpg" style="width:100%"></a>
+    <div id='feynman_text'> Onofre Nuclear Plant(Far View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/pge/pgeCloses.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/pge/pgeClose.jpg" style="width:100%"></a>
+    <div id='feynman_text'> PGE Plant(Close View) </div>
+    </div>
+
+    <div class="container">
+    <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/pge/pgeFar.mp4" target=_self>
+    <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/pge/pgeFar.jpg" style="width:100%"></a>
+    <div id='feynman_text'> PGE Plant(Far View) </div>
+    </div>
+
+    <div class="container">
+      <a href="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/dominion/dominionFar.mp4" target=_self>
+      <img src="/Users/morganmueller/Desktop/ITP/FALL2019/DesignThePostnatural/Collection/webCollection/gridPhotos/dominion/dominionFar.jpg" style="width:100%"></a>
+      <div id='feynman_text'> Dominion Nuclear Plant (Far View) </div>
+      </div>
+  </div>
+
+</body>
+</html>
